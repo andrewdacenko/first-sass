@@ -1,22 +1,27 @@
 body {
-	color: black;
+	padding: 30px;
+	font-family: sans-serif;
+	font-size: 14px;
 }
 
-a {
-	color: red;
-	&:hover {
-		color: blue;
+.box {
+	margin: 0 auto 25px;
+	border: 1px solid;
+	padding: 15px;
+	border-radius: 6px;
+	em {
+		text-decoration: underline;
 	}
 }
 
-h3 {
-	font-size: 13px;
+.important {
+	@extend .box;
+	background-color: #ffe5e5;
+	border-color: red;
+}
 
-	a {
-		text-decoration: none;
-	}
-
-	#two & a {
-		color: orange;
-	}
+.success {
+	@extend .box;
+	background-color: #e6ffe6;
+	border-color: green;
 }
