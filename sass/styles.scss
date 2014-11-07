@@ -8,6 +8,10 @@ $red_color: #ffe5e5;
 $green_color: #e6ffe6;
 $border_radius: 4px;
 
+@function border_color($color) {
+	@return desaturate(darken($color, 25%), 50%);
+}
+
 body {
 	padding: 30px;
 	font-family: "Helvetica Hueu", sans-serif;
@@ -16,7 +20,7 @@ body {
 
 .box {
 	margin: 0 auto 25px;
-	border: 1px solid;
+	border: 1px solid border_color(white);
 	padding: 15px;
 	$border_radius: 6px; /* Overrides */
 	border-radius: $border-radius; /* - === _ */
@@ -29,12 +33,12 @@ body {
 .important {
 	@extend .box;
 	background-color: $red_color;
-	border-color: desaturate(darken($red_color, 25%), 50%); /* Coloring */
+	border-color: border_color($red_color);
 }
 
 .success {
 	@extend .box;
 	$green_color: #e6ffe6 !default; /* Does not overrides anything */
 	background-color: $green_color;
-	border-color: desaturate(darken($green_color, 25%), 50%);
+	border-color: border_color($green_color);
 }
