@@ -12,6 +12,12 @@ $border_radius: 4px;
 	@return desaturate(darken($color, 25%), 50%);
 }
 
+@mixin colored_box($color) {
+	@extend .box;
+	background-color: $color;
+	border-color: border_color($color);
+}
+
 body {
 	padding: 30px;
 	font-family: "Helvetica Hueu", sans-serif;
@@ -31,14 +37,9 @@ body {
 }
 
 .important {
-	@extend .box;
-	background-color: $red_color;
-	border-color: border_color($red_color);
+	@include colored_box($red_color);
 }
 
 .success {
-	@extend .box;
-	$green_color: #e6ffe6 !default; /* Does not overrides anything */
-	background-color: $green_color;
-	border-color: border_color($green_color);
+	@include colored_box($green_color);
 }
