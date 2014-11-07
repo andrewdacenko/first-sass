@@ -12,7 +12,7 @@ $border_radius: 4px;
 	@return desaturate(darken($color, 25%), 50%);
 }
 
-@mixin colored_box($color) {
+@mixin colored_box($color: white) {
 	@extend .box;
 	background-color: $color;
 	border-color: border_color($color);
