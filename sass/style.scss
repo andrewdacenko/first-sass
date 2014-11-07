@@ -1,0 +1,19 @@
+@import "compass";
+
+div {
+	border-radius: 90px;
+	border: 1px solid lighten(gray, 15%);
+	display: block;
+	width: 180px;
+	height: 180px;
+	margin: 100px auto;
+
+	background: blue;
+	@include transition;
+	&:hover {
+		background-color: red;
+		// http://compass-style.org/reference/compass/css3/box_shadow/#mixin-single-box-shadow
+		// single-box-shadow($hoff, $voff, $blur, $spread, $color, $inset)
+		@include single-box-shadow($blur: 0px 30px);
+	}
+}
