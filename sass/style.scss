@@ -1,12 +1,3 @@
-@import "compass";
-@import "icon/*.png";
-
-div {
-	background: image-url('icon/phone.png')
-}
-
-.icon-phone {
-	height: 128px;
-	width: 128px;
-	@include icon-sprite("phone");
-}
+@import "grid";
+@include grid_base;
+// @include grid_base(16);
