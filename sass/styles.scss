@@ -3,9 +3,14 @@
 /* 
  * Main styles
  */
+
+$red_color: #ffe5e5;
+$green_color: #e6ffe6;
+$border_radius: 4px;
+
 body {
 	padding: 30px;
-	font-family: sans-serif;
+	font-family: "Helvetica Hueu", sans-serif;
 	font-size: 14px;
 }
 
@@ -13,7 +18,9 @@ body {
 	margin: 0 auto 25px;
 	border: 1px solid;
 	padding: 15px;
-	border-radius: 6px;
+	$border_radius: 6px; /* Overrides */
+	border-radius: $border-radius; /* - === _ */
+
 	em {
 		text-decoration: underline;
 	}
@@ -21,12 +28,13 @@ body {
 
 .important {
 	@extend .box;
-	background-color: #ffe5e5;
-	border-color: red;
+	background-color: $red_color;
+	border-color: desaturate(darken($red_color, 25%), 50%); /* Coloring */
 }
 
 .success {
 	@extend .box;
-	background-color: #e6ffe6;
-	border-color: green;
+	$green_color: #e6ffe6 !default; /* Does not overrides anything */
+	background-color: $green_color;
+	border-color: desaturate(darken($green_color, 25%), 50%);
 }
