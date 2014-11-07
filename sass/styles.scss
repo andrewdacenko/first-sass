@@ -1,4 +1,22 @@
 body {
 	color: black;
-	background-color: blue;
+}
+
+a {
+	color: red;
+	&:hover {
+		color: blue;
+	}
+}
+
+h3 {
+	font-size: 13px;
+
+	a {
+		text-decoration: none;
+	}
+
+	#two & a {
+		color: orange;
+	}
 }
