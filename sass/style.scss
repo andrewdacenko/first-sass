@@ -1,7 +1,5 @@
 @import "compass";
-@import "compass/utilities/sprites";
 @import "icon/*.png";
-@include all-icon-sprites;
 
 div {
 	background: image-url('icon/phone.png')
@@ -10,4 +8,5 @@ div {
 .icon-phone {
 	height: 128px;
 	width: 128px;
+	@include icon-sprite("phone");
 }
