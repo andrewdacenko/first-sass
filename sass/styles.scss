@@ -16,6 +16,10 @@ $border_radius: 4px;
 	@extend .box;
 	background-color: $color;
 	border-color: border_color($color);
+
+	em {
+		font-weight: bold;
+	}
 }
 
 body {
