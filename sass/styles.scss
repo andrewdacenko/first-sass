@@ -1,8 +1,6 @@
 @import "normilize";
 
-/* 
- * Main styles
- */
+// Main styles
 
 $red_color: #ffe5e5;
 $green_color: #e6ffe6;
@@ -32,8 +30,8 @@ body {
 	margin: 0 auto 25px;
 	border: 1px solid border_color(white);
 	padding: 15px;
-	$border_radius: 6px; /* Overrides */
-	border-radius: $border-radius; /* - === _ */
+	$border_radius: 6px; // Overrides
+	border-radius: $border-radius; // - === _ 
 
 	em {
 		text-decoration: underline;
